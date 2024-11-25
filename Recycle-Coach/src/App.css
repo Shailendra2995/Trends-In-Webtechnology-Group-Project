@@ -1,0 +1,176 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.button-group {
+  margin: 20px 0;
+}
+
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #21a1f1;
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #1e90ff;
+  transform: scale(0.9);
+}
+
+input {
+  margin: 20px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #61dafb;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin-top: 10px;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Resetting default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff; /* White background */
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd; /* Light border for separation */
+}
+
+.header .left,
+.header .right {
+  flex: 0 0 auto; /* Fix the width to auto for left and right */
+}
+
+.header img {
+  width: 80px; /* Adjust the size of the images as needed */
+  height: auto;
+}
+
+.header .center {
+  flex: 1; /* Take up the remaining space */
+  text-align: center; /* Center align text */
+}
+
+.header h6,
+.header h5,
+.header h4 {
+  margin: 5px 0;
+  color: #333; /* Dark gray color for text */
+}
+
+.header h6 {
+  font-size: 16px; /* Smaller font size for h6 */
+}
+
+.header .blue {
+  color: rgb(0, 79, 183); /* Smaller font size for h6 */
+}
+
+.header h5 {
+  font-size: 18px; /* Medium font size for h5 */
+  font-weight: bold; /* Bold font for h5 */
+}
+
+.header h4 {
+  font-size: 20px; /* Larger font size for h4 */
+  font-weight: bold; /* Bold font for h4 */
+  color: red; /* Red color for emphasis */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .header .left,
+  .header .right {
+    margin-bottom: 10px;
+  }
+
+  .header .center {
+    text-align: center;
+  }
+}
